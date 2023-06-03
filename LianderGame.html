@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+            <div style="text-align: center;">
+                <h1>Liander's Clicker game</h1>
+                <p>Not really a game, you just click the non suspicious image at the center of
+                    this website and start clicking to your boredom. No literally you will
+                    get bored some time so there is really no point for you to be in this website
+                    so you can just leave.
+                </p>
+                
+                <p>
+                    <img src="susboi.png" id="susButton">
+                    Hits: <strong id="susHits">0</strong>
+                </p>
+
+            </div>
+            <script>
+                var button = document.getElementById("susButton");
+                var hits = document.getElementById("susHits");
+
+                button.addEventListener("click", tapOrClick);
+                button.addEventListener("touchend", tapOrClick);
+
+                function tapOrClick(event)
+                {
+                    event.preventDefault();
+                    hits.innerText = parseInt(hits.innerText) + 1;
+                    return false;
+                }
+            </script>
+    </body>
+</html>
